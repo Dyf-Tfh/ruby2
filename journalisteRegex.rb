@@ -6,24 +6,31 @@ nb_ = 0
 nbAvecMaj = 0
 nbBeginCaps = 0
 nbInner_ = 0
+#on itère chaque string du tableau
 tablo.each {|i|
+#regex contient un chiffre
 if i =~ /\d/ 
     nb +=1
 end
+#downcase pour éviter les pb de casse
+#regex aude
 if i.downcase =~ /aude/ 
      nbaude+=1
 end
+#regex contient _
 if i =~ /_/ 
      nb_ +=1
 end
-#ce regex ignore _ s'il est le premier caractère, donc le nb de nbBeginCaps est trop élevé
+#regex contient un caractère parmi la classe Majuscule
 if i =~ /[A-Z]/
     nbAvecMaj+=1
 end
+#i[1] correspond uniquement au premier caractère après @
 if i[1] =~ /[A-Z]/
     nbBeginCaps +=1
 end
 a = 0
+#boucle qui itère chaque caractère de chaque string et compte le nombre de _
 while a < i.length
     if i[a] == "_"
     nbInner_ +=1
