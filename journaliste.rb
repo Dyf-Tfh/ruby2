@@ -24,3 +24,4 @@ puts "nombre de Aude = " +nbaude.to_s
 puts "nombre de pseudo avec  _ = " +nb_.to_s
 puts "nombre de pseudo avec une majuscule = " +nbAvecMaj.to_s
 puts "nombre de pseudo qui commencent avec une majuscule = " +nbBeginCaps.to_s
+puts tablo.sort_by { |x| x.downcase }
