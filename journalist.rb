@@ -4,42 +4,62 @@ nb = 0
 digit = [0,1,2,3,4,5,6,7,8,9]
 caps = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","W","Z"]
 nbaude = 0
+#nb de pseudo avec _
 nb_ = 0
+#nb de pseudo avec Maj
 nbAvecMaj = 0
+#nb de pseudo qui commencent par une Maj
 nbBeginCaps = 0
+#nb de _ au total
 nbInner_ = 0
+
 tablo.each {|i|
+    #a représente le a ième caractère des string
     a = 0
+    #nombre de chiffre par string
     nbInnernb = 0
+    #nombre de majuscule par string
     nbInnerAvecMaj = 0
+    #itération sur le string
     while a < i.length
+        #si le tableau de nombre comprend notre caractère
         if digit.to_s.include?(i[a])
             nbInnernb +=1
         end
+        #Idem avec le tableau de Majuscule
         if caps.include?(i[a])
             nbInnerAvecMaj+=1
         end
+        #compte simplement le nombre de _
         if i[a] == "_"
             nbInner_ +=1
         end
+        #passe au caractère suivant
         a+=1
     end
+    #si le nombre de caractère ayant un nombre est supérieur à 0 alors ce caractère a au moins un nombre
+    #et donc on incrémente le compteur de pseudo ayant un nombre
     if nbInnernb > 0
         nb +=1
     end
+    #idem avec les maj
     if nbInnerAvecMaj > 0
         nbAvecMaj +=1
     end
 }
+#Si le tableau de majuscule comprend la second lettre du pseudo (après le @ donc)
 tablo.each {|i|
     if caps.include?(i[1])
         nbBeginCaps+=1
     end
 }
-tablo.select {|nom|
+tablo.each {|nom|
+    #si le string possède un _
     if nom.include? "_"
         nb_+=1
     end
+    #si le string possède un "aude"
+    #on downcase la liste de string pour s'éviter des problèmes de casse
     if nom.downcase.include? "aude"
         nbaude+=1
     end
