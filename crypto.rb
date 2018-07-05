@@ -11,6 +11,7 @@ lowcoin = {}
 #hash des crypto avec "coin"
 supercoincoin = {}
 #un nouveau tableaux, pour avoir des valeur.class = float à la place des strings
+#ce tableau permettra de calculer les valeurs maximales et minimale
 valeurnum = []
 #nouveau hash qui contient key: value ; value. class = float
 hyperhash = {}
