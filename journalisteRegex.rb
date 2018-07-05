@@ -10,7 +10,7 @@ tablo.each {|i|
 if i =~ /\d/ 
     nb +=1
 end
-if i =~ /Aude/ 
+if i.downcase =~ /aude/ 
      nbaude+=1
 end
 if i =~ /_/ 

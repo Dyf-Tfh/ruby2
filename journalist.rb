@@ -34,19 +34,18 @@ tablo.each {|i|
 tablo.each {|i|
     if caps.include?(i[1])
         nbBeginCaps+=1
-        puts i
     end
 }
 tablo.select {|nom|
     if nom.include? "_"
         nb_+=1
     end
-    if nom.include? "Aude"
+    if nom.downcase.include? "aude"
         nbaude+=1
     end
 }
 puts "nombre de pseudo avec des chiffres = " + nb.to_s
-puts "nombre de Aude = " +nbaude.to_s
+puts "nombre de pseudo avec aude (non sensible à la casse) = " +nbaude.to_s
 puts "nombre de pseudo avec  _ = " +nb_.to_s
 puts "nombre de _ : " + nbInner_.to_s
 puts "nombre de pseudo avec une majuscule = " +nbAvecMaj.to_s
