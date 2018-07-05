@@ -19,10 +19,10 @@ superhash.each{|key,value|
     value.slice!(0)
     #affectation des float au nouveau tableau
     valeurnum << value.to_f   
-    #création du hash lowcoin
+    #création du hash lowcoin NB: value reste un string
     if (value.to_f <= 6000)
     lowcoin.store(key , value) end
-    #création du hash supercoincoin
+    #création du hash supercoincoin NB: idem
     if key.downcase =~ /coin/
         supercoincoin.store(key,value) end
 }
@@ -41,15 +41,16 @@ puts "nombre de crypto avec le mot coin: "  + supercoincoin.length.to_s
 puts "devises dont le cours est inférieur à $6000 (non ordonné):"
 puts "attention la liste est longue, appuyer sur entrée pour afficher"
 gets.chomp
+nbhyperho = 0
 lowcoin.each {
     |key,value|
+#affiche la liste des lowcoins
     puts key.to_s + " $" + value.to_s
-}
-nbhyperho = 0
-lowcoin.each{|key,value|
-    if (value.to_i > nbhyperho.to_i)
+#Détermine la plus grande valeur parmi les lowcoins
+    if (value.to_f > nbhyperho.to_f)
         nbhyperho = value 
     end
 }
+
 puts "Parmi cette (longue) liste, celle-ci a la plus grande valeur: " 
-puts lowcoin.key(nbhyperho) + " à $" + nbhyperho.to_s
+puts lowcoin.key(nbhyperho) + " à $" + nbhyperho
