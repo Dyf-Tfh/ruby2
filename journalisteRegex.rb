@@ -32,7 +32,7 @@ while a < i.length
 end
 }
 puts "nombre de pseudo avec des chiffres = " + nb.to_s
-puts "nombre de Aude = " +nbaude.to_s
+puts "nombre de aude = " +nbaude.to_s
 puts "nombre de pseudo qui commencent avec une majuscule = " +nbBeginCaps.to_s
 puts "nombre de pseudo avec une majuscule = " +nbAvecMaj.to_s
 puts "nombre de _ : " + nbInner_.to_s
