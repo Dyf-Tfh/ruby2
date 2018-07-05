@@ -14,6 +14,7 @@ supercoincoin = {}
 #ce tableau permettra de calculer les valeurs maximales et minimale
 valeurnum = []
 #nouveau hash qui contient key: value ; value. class = float
+#premetra de déterminer la cryptomonnaie associée à la valeur max et min que l'on va obtennir
 hyperhash = {}
 superhash.each{|key,value|
     #suppression du $
