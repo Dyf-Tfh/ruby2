@@ -33,8 +33,10 @@ end
 }
 puts "nombre de pseudo avec des chiffres = " + nb.to_s
 puts "nombre de Aude = " +nbaude.to_s
-puts "nombre de pseudo avec un _ = " +nb_.to_s
-puts "nombre de _ : " + nbInner_.to_s
-puts "nombre de pseudo avec une majuscule = " +nbAvecMaj.to_s
 puts "nombre de pseudo qui commencent avec une majuscule = " +nbBeginCaps.to_s
-#puts tablo.sort_by { |x| x.downcase }
+puts "nombre de pseudo avec une majuscule = " +nbAvecMaj.to_s
+puts "nombre de _ : " + nbInner_.to_s
+puts "nombre de pseudo avec un _ = " +nb_.to_s
+puts "attention affichage de la liste ordonnée, appuyez entrée"
+gets.chomp
+puts tablo.sort_by { |x| x.downcase }
