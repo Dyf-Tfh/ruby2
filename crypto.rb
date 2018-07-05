@@ -39,3 +39,4 @@ supercoin.each{|key,value|
 }
 puts "Parmi cette (longue) liste, celle-ci a la plus grande valeur: " 
 puts supercoin.key(nbhyperho) + " à $" + nbhyperho.to_s
+puts superhash
