@@ -37,7 +37,7 @@ end
 #ces va
 puts "crypto avec la plus grosse valeur: " + hyperhash.key(valeurnum.max).to_s + " à $" + valeurnum.max.to_s
 puts "crypto avec la plus petite valeur: " + hyperhash.key(valeurnum.min).to_s + " à $" + valeurnum.min.to_s
-puts "nombre de crypto avec le mot coin: "  + supercoincoin.length.to_s
+puts "nombre de crypto avec le mot coin (insensible à la casse): "  + supercoincoin.length.to_s
 puts "devises dont le cours est inférieur à $6000 (non ordonné):"
 puts "attention la liste est longue, appuyer sur entrée pour afficher"
 gets.chomp
