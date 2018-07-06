@@ -35,8 +35,7 @@ valeurnum.size.times do
     h+=1
 end
 #hyperhash.key(truc) permet de retrouver la key associé à une valeur càd le nom de la crypto associé au float
-#valeurnum.max et valeurnum.min permettent de respectiver retrouver la valeur maximale et minumale des cours des crypto
-#ces va
+#valeurnum.max et valeurnum.min permettent de respectivement retrouver la valeur maximale et minumale des cours des crypto
 puts "crypto avec la plus grosse valeur: " + hyperhash.key(valeurnum.max).to_s + " à $" + valeurnum.max.to_s
 puts "crypto avec la plus petite valeur: " + hyperhash.key(valeurnum.min).to_s + " à $" + valeurnum.min.to_s
 puts "nombre de crypto avec le mot coin (insensible à la casse): "  + supercoincoin.length.to_s
