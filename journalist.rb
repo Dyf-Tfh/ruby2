@@ -48,24 +48,21 @@ tablo.each {|i|
     if nbInnerAvecMaj > 0
         nbAvecMaj +=1
     end
-}
-#Si le tableau de majuscule comprend la second lettre du pseudo (après le @ donc)
-tablo.each {|i|
-    if caps.include?(i[1])
-        nbBeginCaps+=1
-    end
-}
-tablo.each {|nom|
     #si le string possède un _
-    if nom.include? "_"
+     if i.include? "_"
         nb_+=1
     end
     #si le string possède un "aude"
     #on downcase la liste de string pour s'éviter des problèmes de casse
-    if nom.downcase.include? "aude"
+    if i.downcase.include? "aude"
         nbaude+=1
     end
+    #Si le tableau de majuscule comprend la second lettre du pseudo (après le @ donc)
+    if caps.include?(i[1])
+        nbBeginCaps+=1
+    end
 }
+
 puts "nombre de pseudo avec des chiffres = " + nb.to_s
 puts "nombre de aude  = " +nbaude.to_s
 puts "nombre de pseudo qui commencent avec une majuscule = " +nbBeginCaps.to_s
